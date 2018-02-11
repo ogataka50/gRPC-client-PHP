@@ -1,0 +1,17 @@
+#!/usr/bin/env php
+
+<?php
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+use gRPCClient\Command\HelloGrpcCommand;
+
+ini_set("memory_limit",-1);
+date_default_timezone_set('Asia/Tokyo');
+
+
+$app = new Application();
+$app->add(new HelloGrpcCommand());
+
+$app->run();
