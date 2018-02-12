@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ce9ae4dd0ac7c2fd032372bb279e42c3",
+    "content-hash": "35c00fb5b1f1d5223bae6f6e69426f2d",
     "packages": [
         {
             "name": "grpc/grpc",
@@ -177,6 +177,48 @@
                 "time"
             ],
             "time": "2017-01-16T07:55:07+00:00"
+        },
+        {
+            "name": "ogataka50/come-on-proto",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ogataka50/come-on-proto.git",
+                "reference": "8b709957993b1bb8f745459df850e8d4f08e79ee"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ogataka50/come-on-proto/zipball/8b709957993b1bb8f745459df850e8d4f08e79ee",
+                "reference": "8b709957993b1bb8f745459df850e8d4f08e79ee",
+                "shasum": ""
+            },
+            "require": {
+                "grpc/grpc": "^1.9",
+                "monolog/monolog": "^1.23",
+                "nesbot/carbon": "^1.22",
+                "php": "^7.1",
+                "protobuf-php/protobuf": "^0.1.3",
+                "symfony/console": "^3.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Ping\\": "php/Ping",
+                    "GPBMetadata\\": "php/GPBMetadata"
+                }
+            },
+            "authors": [
+                {
+                    "name": "ogataka50",
+                    "email": "ogataka50@gmail.com"
+                }
+            ],
+            "description": "proto repo",
+            "support": {
+                "source": "https://github.com/ogataka50/come-on-proto/tree/master",
+                "issues": "https://github.com/ogataka50/come-on-proto/issues"
+            },
+            "time": "2018-02-12T12:21:21+00:00"
         },
         {
             "name": "protobuf-php/protobuf",
@@ -545,7 +587,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "ogataka50/come-on-proto": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
