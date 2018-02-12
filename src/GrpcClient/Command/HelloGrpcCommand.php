@@ -2,6 +2,7 @@
 
 namespace gRPCClient\Command;
 
+use GrpcClient\Client;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -31,7 +32,10 @@ class HelloGrpcCommand extends Command
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        echo "Hello GRPC";
+        $client = new Client();
+        list($reply, $status) = $client->Ping();
+        var_dump($status);
+        var_dump($reply->getResMessage());
 
         return 0;
     }
